@@ -1,7 +1,7 @@
 var canvas = document.getElementById("canvas");
 var context = canvas.getContext("2d");
 
-var mouseX, mouseY;
+var mouse = new GameObject(undefined, undefined);
 var isKeyPressed = [];
 
 for (let i = 0; i < 256; isKeyPressed[i++] = 0);
@@ -16,8 +16,8 @@ function init() {
 }
 
 window.addEventListener("mousemove", function (e) {
-    mouseX = e.x - canvas.offsetLeft;
-    mouseY = e.y - canvas.offsetTop;
+    mouse.x = e.x - canvas.offsetLeft;
+    mouse.y = e.y - canvas.offsetTop;
 });
 
 window.addEventListener("keydown", function (e) {
