@@ -44,11 +44,11 @@ class ActiveGameObject extends GameObject {
         window.addEventListener("mouseup", function () {
             obj.clicked = false;
             obj.grounded = false;
+            obj.gravitySpeed = 0;
         });
 
         if (areColliding(this, smth)) {
             this.grounded = true;
-            this.gravity = (this.width + this.height) / 500;
             this.gravitySpeed = 0;
 
             this.y = smth.y - this.height;
