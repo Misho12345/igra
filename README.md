@@ -1,2 +1,1 @@
-# milko
-milko sait
+# igra
